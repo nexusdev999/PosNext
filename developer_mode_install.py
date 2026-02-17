@@ -42,6 +42,7 @@ print("boa escolha para seu workspace")
 if select == 1:
     os.system("clear")
     os.system("curl -fsSL https://linux.toys/install.sh | bash")
+    os.system("clear")
     os.system("python developer_mode_install.py")
 else:
     os.system("clear")
