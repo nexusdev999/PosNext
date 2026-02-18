@@ -1,5 +1,5 @@
 # import
-import subprocess, os
+import subprocess, os, time
 
 clear = os.system("clear")
 
@@ -67,6 +67,7 @@ elif select == 5:
 else:
     os.system("clear")
     print("não temos essa opção")
+    time.sleep(2.0)
     os.system("python developer_mode_install.py")
     os.system("para sair e só fechar o terminal")
 
