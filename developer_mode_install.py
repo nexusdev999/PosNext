@@ -44,6 +44,26 @@ if select == 1:
     os.system("curl -fsSL https://linux.toys/install.sh | bash")
     os.system("clear")
     os.system("python developer_mode_install.py")
+elif select == 2:
+    os.system("clear")
+    os.system("sudo pacman -S --needed base-devel git nodejs npm python python-pip gcc gdb cmake clang valgrind")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 3:
+    os.system("clear")
+    os.system("sudo pacman -S github-desktop")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 4:
+    os.system("clear")
+    os.system("sudo pacman -S code")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 5:
+    os.system("clear")
+    os.system("sudo pacman -S kitty")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
 else:
     os.system("clear")
     print("não temos essa opção")
