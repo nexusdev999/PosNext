@@ -64,10 +64,83 @@ elif select == 5:
     os.system("sudo pacman -S kitty")
     os.system("clear")
     os.system("python developer_mode_install.py")
+elif select == 6:
+    os.system("clear")
+    os.system("sudo pacman -S geany")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 7:
+    os.system("clear")
+    os.system("sudo pacman -S ghidra")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 8:
+    os.system("clear")
+    os.system("sudo pacman -S devtools")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 9:
+    os.system("clear")
+    os.system("sudo pacman -S qtcreator")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 10:
+    os.system("clear")
+    os.system('curl -f https://zed.dev/install.sh | sh')
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 11:
+    os.system("clear")
+    os.system("sudo pacman -S postman-bin")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 12:
+    os.system("clear")
+    os.system("sudo pacman -S unityhub")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 13:
+    os.system("clear")
+    os.system("yay -S gamemaker2-bin")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 14:
+    os.system("clear")
+    os.system("sudo pacman -S meld")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 15:
+    os.system("clear")
+    os.system("sudo pacman -S docker")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 16:
+    os.system("clear")
+    os.system("sudo pacman -S ghostwriter")
+    os.system("yay -S typora")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 17:
+    os.system("clear")
+    os.system("sudo pacman -S --needed ghostwriter")
+    os.system("yay -S --needed typora")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 18:
+    os.system("clear")
+    os.system('bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"')
+    os.system("clear")
+    os.system("python developer_mode_install.py")
+elif select == 19:
+    os.system("clear")
+    os.system("sudo pacman -S warp")
+    os.system("clear")
+    os.system("python developer_mode_install.py")
 else:
     os.system("clear")
     print("não temos essa opção")
     time.sleep(2.0)
+    os.system("clear")
     os.system("python developer_mode_install.py")
     os.system("para sair e só fechar o terminal")
 
