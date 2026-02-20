@@ -56,6 +56,42 @@ elif selecione == 2:
     time.sleep(2.0)
     os.system('clear')
     os.system('python .office.py')
+elif selecione == 3:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .gamer.py')
+elif selecione == 4:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .social.py')
+elif selecione == 5:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .extras.py')
+elif selecione == 6:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .optimize.py')
+elif selecione == 7:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .repositorios.py')
+elif selecione == 8:
+    os.system('clear')
+    print('carregando aplicativos')
+    time.sleep(2.0)
+    os.system('clear')
+    os.system('python .themes.py')
 else:
     os.system('clear')
     print('não temos essa opção')
