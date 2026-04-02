@@ -6,7 +6,7 @@ limpar = os.system("clear")
 sistema = platform.system()
 arquitetura = platform.machine()
 
-#instalar apps
+#lista de progamas
 lista_gamer = ["steam", "discord", "vlc", "wine-cachyos", "wine-cachyos-opt", "wine-staging", "wine-gecko", "wine-mono", "winetricks", "govelay", "lutris", "heroic-games-laucher-bin", "protonup", "protonup-qt", "protontricks", "prismlaucher"]
 
 print("carregando codigo aguarde...")

@@ -1,172 +1,101 @@
-# import
 import subprocess, os, time
 
-clear = os.system("clear")
+# Limpa a tela ao iniciar
+os.system("clear")
+
+# Listas de programas (nomes corrigidos para pacotes Arch/AUR)
+aur_list = ["ghidra", "code", "qtcreator", "kitty", "zed", "geany", "meld", "docker", "netbeans", "ghostwriter"]
+helpers_list = ["github-desktop-bin", "devtoolbox-bin", "postman-bin", "unityhub", "gamemaker-beta-bin", "typora", "oh-my-bash-git", "warp-terminal", "xampp", "sublime-text-4"]
+
+def reiniciar():
+    os.system("python .developer.py")
 
 print("""
-
 ______________________________________________
 
-LISTA DE APPS PARA DOWNLOAD V1
--cachyos
-
-______________________________________________
-
-            [1]linux toys
-
-[2]base e depedencias   | [7]Ghidra
-
-[3]github desktop       | [8]dev toolbox
-
-[4]visual studio code   | [9]qt creator
-|open souce
-
-[5]kitty                | [10]zed
-
-[6]geany                | [11]postman
-
-[12]unity hub           | [13]gamemaker2
-
-[14]Meld                | [15]docker
+██████╗  ██████╗ ███████╗████████╗ 
+██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝ 
+██████╔╝██║   ██║███████╗   ██║    
+██╔═══╝ ██║   ██║╚════██║   ██║    
+██║     ╚██████╔╝███████║   ██║    
+╚═╝      ╚═════╝ ╚══════╝   ╚═╝    
+                                   
+███╗   ██╗███████╗██╗  ██╗████████╗
+████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+██╔██╗ ██║█████╗   ╚███╔╝    ██║   
+██║╚██╗██║██╔══╝   ██╔██╗    ██║   
+██║ ╚████║███████╗██╔╝ ██╗   ██║   
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                   
+ [+] PosNext developer Installer
  
-[16]Typora/Ghostwriter  | [17]Typora/Ghostwriter
+ [+] Installing developer Apps...
 
-[18]oh my bash          | [19]Warp
+ [+] sistema: {sistema}
+ 
+ [+] arquitetura: {arquitetura}
 
-[20]xamp                | [21]netbeans
-
-[22]sublime text        | [23]laucher studio
-      
+______________________________________________
+            [1] linux toys
+[2] base e depedencias   | [7] Ghidra
+[3] github desktop       | [8] dev toolbox
+[4] visual studio code   | [9] qt creator
+[5] kitty                | [10] zed
+[6] geany                | [11] postman
+[12] unity hub           | [13] gamemaker2
+[14] Meld                | [15] docker
+[16] Typora              | [17] Ghostwriter
+[18] oh my bash          | [19] Warp
+[20] xampp               | [21] netbeans
+[22] sublime text        | [23] launcher studio
 ==============================================
 """)
 
-select = int(input("Digite o numero da opção escolhida: "))
-print("boa escolha para seu workspace")
+try:
+    select = int(input("Digite o numero da opção escolhida: "))
+except ValueError:
+    reiniciar()
+
+print("Boa escolha para seu workspace!")
+
+# Dicionário que mapeia o número ao nome real do pacote
+apps = {
+    3: "github-desktop-bin", 4: "code", 5: "kitty", 6: "geany",
+    7: "ghidra", 8: "dev-toolbox", 9: "qtcreator", 10: "zed",
+    11: "postman-bin", 12: "unityhub", 13: "gamemaker-bin", 14: "meld",
+    15: "docker", 16: "typora", 17: "ghostwriter", 19: "warp-terminal",
+    20: "xampp", 21: "netbeans", 22: "sublime-text-4"
+}
 
 if select == 1:
-    os.system("clear")
     os.system("curl -fsSL https://linux.toys/install.sh | bash")
-    os.system("clear")
-    os.system("python .developer.py")
+    reiniciar()
+
 elif select == 2:
-    os.system("clear")
-    os.system("sudo pacman -S --needed base-devel git nodejs npm python python-pip gcc gdb cmake clang valgrind")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 3:
-    os.system("clear")
-    os.system("sudo pacman -S github-desktop")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 4:
-    os.system("clear")
-    os.system("sudo pacman -S code")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 5:
-    os.system("clear")
-    os.system("sudo pacman -S kitty")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 6:
-    os.system("clear")
-    os.system("sudo pacman -S geany")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 7:
-    os.system("clear")
-    os.system("sudo pacman -S ghidra")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 8:
-    os.system("clear")
-    os.system("sudo pacman -S devtools")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 9:
-    os.system("clear")
-    os.system("sudo pacman -S qtcreator")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 10:
-    os.system("clear")
-    os.system('curl -f https://zed.dev/install.sh | sh')
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 11:
-    os.system("clear")
-    os.system("sudo pacman -S postman-bin")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 12:
-    os.system("clear")
-    os.system("sudo pacman -S unityhub")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 13:
-    os.system("clear")
-    os.system("yay -S gamemaker2-bin")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 14:
-    os.system("clear")
-    os.system("sudo pacman -S meld")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 15:
-    os.system("clear")
-    os.system("sudo pacman -S docker")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 16:
-    os.system("clear")
-    os.system("sudo pacman -S ghostwriter")
-    os.system("yay -S typora")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 17:
-    os.system("clear")
-    os.system("sudo pacman -S --needed ghostwriter")
-    os.system("yay -S --needed typora")
-    os.system("clear")
-    os.system("python .developer.py")
+    os.system("sudo pacman -Syu --needed base-devel git curl wget zenity python python-requests python-gobject gtk3 vte3 jdk-openjdk pkg-config libx11 libxkbcommon wayland fontconfig freetype2 alsa-lib libsecret nspr nss unzip libxtst libxss mesa libglvnd")
+    reiniciar()
+
 elif select == 18:
-    os.system("clear")
     os.system('bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"')
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 19:
-    os.system("clear")
-    os.system("sudo pacman -S warp")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 20:
-    os.system("clear")
-    os.system("sudo pacman -S xampp")
-    os.system("clear")
-    os.system("python .developer")
-elif select == 21:
-    os.system("clear")
-    os.system("sudo pacman -S netbeans")
-    os.system("clear")
-    os.system("python .developer.py")
-elif select == 22:
-    os.system("clear")
-    os.system("sudo pacman -S sublime-text-4")
-    os.system("clear")
-    os.system("python .developer.py")
+    reiniciar()
+
 elif select == 23:
-    os.system("clear")
     os.system("flatpak install flathub fr.arnaudmichel.launcherstudio")
+    reiniciar()
+
+elif select in apps:
     os.system("clear")
-    os.system("python .developer.py")
+    # No CachyOS, usamos yay para cobrir Repos Oficiais e AUR de uma vez
+    subprocess.run(["yay", "-S", "--needed", "--noconfirm", apps[select]])
+    reiniciar()
+
 else:
-    os.system("clear")
-    print("não temos essa opção")
-    time.sleep(2.0)
-    os.system("clear")
-    os.system("python .developer")
-    os.system("para sair e só fechar o terminal")
+    print("Não temos essa opção")
+    time.sleep(2)
+    reiniciar()
+
+    
+
 
 
 
